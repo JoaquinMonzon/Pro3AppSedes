@@ -10,7 +10,7 @@ class UsersTableSeeder extends Seeder
      * @return void
      */
     public function run()
-    {       fgfg
+    {       
         factory(App\User::create([
         	'name' => 'Joaquin Monzon',
         	'email' => 'joamonz@hotmail.com',
