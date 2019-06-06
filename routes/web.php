@@ -21,13 +21,15 @@ Route::get('saludar/{name?}/{lastname?}', function($name=null,$lastname=null) {
 
 
 
-Route::resource('usuarios','UsuariosController');
+
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('users','UserController@index');
+Route::get('users-list','UserController@userslist');
+Route::get('users_lista','UserController@userslista');
 
-Route::get('/ingresar','UsuariosController@ingresar');
 
 
 

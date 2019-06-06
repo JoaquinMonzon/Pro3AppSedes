@@ -1,6 +1,6 @@
 <?php
 
-/*namespace App\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Persona;
@@ -28,5 +28,5 @@ class PersonaController extends Controller
   public function busqueda(request $request){
     $aux = Persona::where('dni','=',$dni)->first();
     return view ('persona.busqueda',compact('aux'));
-  }*/
+  }
 }

@@ -4,22 +4,19 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePersonasTable extends Migration
+class CreatePerfilesTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-
     public function up()
     {
-        Schema::create('personas', function (Blueprint $table) {
+        Schema::create('perfiles',function (Blueprint $table){
             $table->bigIncrements('id');
-            $table->timestamps();
-            $table->string('lastname');
-            $table->string('name');
-            $table->integer('dni');
+            $table->string('description');
+            $table->integer('user_id');
         });
     }
 
@@ -30,6 +27,6 @@ class CreatePersonasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('personas');
+        Schema::dropIfExists('perfiles');
     }
 }
